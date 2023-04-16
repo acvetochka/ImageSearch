@@ -7,10 +7,9 @@ import Notiflix from 'notiflix';
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
+const btnLoad = document.querySelector('.load-more');
 let query = '';
 let page = 1;
-// let newPage = 1;
-const btnLoad = document.querySelector('.load-more');
 const lightbox = new SimpleLightbox('.gallery a');
 
 form.addEventListener('change', onInput);
@@ -24,11 +23,9 @@ function onInput(evt) {
 
 function onSubmit(evt) {
   evt.preventDefault();
-  //   newPage = 1;
   page = 1;
   gallery.innerHTML = '';
   btnLoad.classList.add('btn-hidden');
-  document.removeEventListener('scroll', scroll);
 
   if (!evt.target.elements.searchQuery.value) {
     Notiflix.Notify.failure('Please, enter a search query');
@@ -47,7 +44,6 @@ function addImages(response) {
     );
   } else {
     createGalleryItem(images);
-    // window.addEventListener('scroll', scroll);
     getGallery(query, page).then(response =>
       Notiflix.Notify.success(
         `Hooray! We found ${response.data.totalHits} images.`
@@ -61,10 +57,7 @@ function addImages(response) {
 }
 
 function onClick(evt) {
-  //   newPage += 1;
   page += 1;
-  console.log(totalPages);
-  console.log(page);
   getGallery(query, page).then(response => {
     const images = response.data.hits;
     createGalleryItem(images);
@@ -73,11 +66,10 @@ function onClick(evt) {
   });
   if (page > totalPages) {
     evt.target.classList.add('btn-hidden');
-    console.dir(document.documentElement);
     Notiflix.Notify.warning(
       "We're sorry, but you've reached the end of search results."
     );
   }
 }
 
-export { newPage, gallery };
+export { gallery };

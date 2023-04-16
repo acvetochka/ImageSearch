@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { newPage } from '../index';
 
 const per_page = 40;
 let totalPages = 0;
@@ -25,4 +24,4 @@ async function getGallery(query, page) {
   }
 }
 
-export { getGallery, page, totalPages };
+export { getGallery, totalPages };

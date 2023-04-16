@@ -31,7 +31,6 @@ img {
 
 .search-form {
   display: flex;
-  /* gap: 0; */
   align-items: center;
   justify-content: center;
   height: 30px;
@@ -45,15 +44,9 @@ img {
   display: block;
   outline: none;
   border-radius: 5px;
-  /* border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px; */
   border: 1px solid #8888;
   border-right: none;
   padding: 0 5px;
-}
-
-.search-input:focus {
-  border: 1px solid #4a4a4a;
 }
 
 .btn-search {
@@ -68,13 +61,16 @@ img {
   text-align: center;
   padding: 0;
   margin-left: -30px;
-  /* margin-left: -25px; */
-}
-
-.btn-search:focus {
   outline: none;
 }
 
+.btn-search:hover {
+  cursor: pointer;
+}
+.search-input:focus,
+.btn-search:focus {
+  border: 1px solid #4a4a4a;
+}
 .gallery-section {
   margin-top: 50px;
 }
