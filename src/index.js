@@ -30,7 +30,17 @@ function onSubmit(evt) {
   if (!evt.target.elements.searchQuery.value) {
     Notiflix.Notify.failure('Please, enter a search query');
   } else {
-    getGallery(query, page).then(addImages);
+    // getGallery(query, page).then(addImages);
+    addGallerySubmit();
+  }
+}
+
+async function addGallerySubmit() {
+  try {
+    const response = await getGallery(query, page);
+    addImages(response);
+  } catch (error) {
+    console.error(error);
   }
 }
 
@@ -56,14 +66,27 @@ function addImages(response) {
   }
 }
 
-function onClick(evt) {
-  page += 1;
-  getGallery(query, page).then(response => {
+async function addGalleryClick() {
+  try {
+    const response = await getGallery(query, page);
     const images = response.data.hits;
     createGalleryItem(images);
     scroll();
     lightbox.refresh();
-  });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function onClick(evt) {
+  page += 1;
+  addGalleryClick();
+  //   getGallery(query, page).then(response => {
+  //     const images = response.data.hits;
+  //     createGalleryItem(images);
+  //     scroll();
+  //     lightbox.refresh();
+  //   });
   if (page > totalPages) {
     evt.target.classList.add('btn-hidden');
     Notiflix.Notify.warning(
