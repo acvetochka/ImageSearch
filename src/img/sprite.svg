@@ -1,0 +1,15 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-search" viewBox="0 0 32 32">
+<path d="M31.415 28.594l-6.194-6.196c4.634-6.193 3.371-14.97-2.822-19.605s-14.97-3.371-19.605 2.822-3.371 14.97 2.822 19.605c4.975 3.723 11.807 3.723 16.782 0l6.196 6.196c0.779 0.779 2.041 0.779 2.82 0s0.779-2.041 0-2.82l0-0.003zM14.059 24.024c-5.504 0-9.966-4.462-9.966-9.966s4.462-9.966 9.966-9.966 9.966 4.462 9.966 9.966c-0.006 5.502-4.464 9.96-9.966 9.966z"></path>
+</symbol>
+<symbol id="icon-arrow-right1" viewBox="0 0 32 32">
+<path d="M0 0h32v32h-32v-32z"></path>
+<path d="M22.492 7.586l-1.414 1.414 6 6h-26.078v2h26.078l-6 6 1.414 1.414 8.414-8.414-8.414-8.414z"></path>
+</symbol>
+<symbol id="icon-arrow-left1" viewBox="0 0 32 32">
+<path d="M0 0h32v32h-32v-32z"></path>
+<path d="M31.083 15h-26.078l6-6-1.414-1.414-8.414 8.414 8.414 8.414 1.414-1.414-6-6h26.078v-2z"></path>
+</symbol>
+</defs>
+</svg>

@@ -13,8 +13,11 @@
   <main>
     <section class="form-section">
       <form class="search-form" id="search-form">
-        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-        <button type="submit">Search</button>
+        <input class="search-input" type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button type="submit" class="btn-search">
+          <svg width="10" height="10">
+            <use href="./img/sprite.svg#icon-search"></use>
+          </svg></button>
       </form>
     </section>
     <section class="gallery-section">
