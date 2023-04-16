@@ -3,7 +3,6 @@ import { newPage } from '../index';
 
 const per_page = 40;
 let totalPages = 0;
-let page = 1;
 
 async function getGallery(query, page) {
   try {

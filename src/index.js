@@ -8,6 +8,7 @@ import Notiflix from 'notiflix';
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 let query = '';
+let page = 1;
 // let newPage = 1;
 const btnLoad = document.querySelector('.load-more');
 const lightbox = new SimpleLightbox('.gallery a');
