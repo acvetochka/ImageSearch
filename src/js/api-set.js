@@ -19,9 +19,6 @@ async function getGallery(query, page) {
   const response = await axios.get(`https://pixabay.com/api/?${params}`);
   totalPages = response.data.totalHits / per_page;
   return response;
-  // } catch (error) {
-  //   console.error(error);
-  // }
 }
 
 export { getGallery, totalPages };
