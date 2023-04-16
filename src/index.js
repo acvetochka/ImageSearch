@@ -17,7 +17,7 @@ form.addEventListener('submit', onSubmit);
 btnLoad.addEventListener('click', onClick);
 
 function onInput(evt) {
-  query = evt.target.value;
+  query = evt.target.value.trim();
   return query;
 }
 
@@ -44,11 +44,11 @@ function addImages(response) {
     );
   } else {
     createGalleryItem(images);
-    getGallery(query, page).then(response =>
-      Notiflix.Notify.success(
-        `Hooray! We found ${response.data.totalHits} images.`
-      )
+    // getGallery(query, page).then(response =>
+    Notiflix.Notify.success(
+      `Hooray! We found ${response.data.totalHits} images.`
     );
+    // );
     lightbox.refresh();
     if (totalPages > 1) {
       btnLoad.classList.remove('btn-hidden');
