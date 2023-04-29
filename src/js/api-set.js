@@ -4,7 +4,6 @@ const per_page = 40;
 let totalPages = 0;
 
 async function getGallery(query, page) {
-  // try {
   const API_KEY = '35367804-7020ab364021c8257af086cad';
   const params = new URLSearchParams({
     key: API_KEY,
