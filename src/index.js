@@ -7,6 +7,7 @@ import Notiflix from 'notiflix';
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
+const gallerySection = document.querySelector(".gallery-section");
 // const btnLoad = document.querySelector('.load-more');
 const guard = document.querySelector('.guard');
 let query = '';
@@ -93,10 +94,12 @@ function addImages(response) {
 
   if (!images.length) {
     gallery.innerHTML = '';
+    gallerySection.classList.add('desert-gallery')
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
   } else {
+    gallerySection.classList.remove('desert-gallery')
     createGalleryItem(images);
     Notiflix.Notify.success(
       `Hooray! We found ${response.data.totalHits} images.`
