@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+main {
+  min-height: 100vh;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -73,6 +77,15 @@ img {
 }
 .gallery-section {
   margin-top: 50px;
+  opacity: 0.3;
+  background-image: url("../img/fon.webp");
+  /* background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%); */ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* filter: blur(5px); */
+  backdrop-filter: blur(200px);
+  backdrop-filter: opacity(20%);
 }
 .gallery {
   display: flex;
