@@ -5,8 +5,10 @@
   "main": "index.js",
   "homepage": "https://acvetochka.github.io/ImageSearch",
   "scripts": {
-    "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "start": "webpack serve --mode development --watch",
+    "build": "webpack --mode production",
+    "predeploy": "rd /s /q dist && webpack",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "buffer": "^6.0.3",
     "css-loader": "^7.1.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "posthtml-include": "^1.7.4",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
