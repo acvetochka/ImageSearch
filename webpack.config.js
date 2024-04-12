@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,11 +8,17 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
   },
-    devServer: {
-      static: path.join(__dirname, 'src'),
-      port: 8080, 
-      open: true 
-    },
+  devServer: {
+    static: path.join(__dirname, 'src'),
+    port: 8080,
+    open: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html', // Шлях до вашого index.html
+      filename: 'index.html', // Ім'я створеного файлу
+    }),
+  ],
   module: {
     rules: [
       {
@@ -29,7 +36,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src/img'),
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]', 
+          filename: 'images/[name][ext]',
         },
       },
     ],
