@@ -8,9 +8,9 @@ module.exports = {
     publicPath: '/',
   },
     devServer: {
-      static: path.join(__dirname, 'src'), // Замініть 'src' на шлях до вашої папки з HTML-файлом
-      port: 8080, // Опціонально, можна змінити порт
-      open: true // Опціонально, відкривати сторінку у браузері автоматично
+      static: path.join(__dirname, 'src'),
+      port: 8080, 
+      open: true 
     },
   module: {
     rules: [
@@ -29,7 +29,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src/img'),
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]', // Вказуємо, щоб зображення зберігалися у папці images
+          filename: 'images/[name][ext]', 
         },
       },
     ],
