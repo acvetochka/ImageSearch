@@ -12,7 +12,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      images: path.resolve(__dirname, 'src/img/'),
+      images: path.resolve(__dirname, 'src/images/'),
     },
   },
   devServer: {
@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/img', to: 'images' },
+        { from: 'src/images', to: 'images' },
         { from: 'src/index.html', to: 'index.html' },
         { from: 'src/css', to: 'css' },
       ],
@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        include: path.resolve(__dirname, 'src/img'),
+        include: path.resolve(__dirname, 'src/images'),
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
