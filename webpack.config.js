@@ -52,15 +52,6 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
         include: /node_modules/,
       },
-      // {
-      //   test: /\.css$/,
-      //   // use: ['style-loader', 'css-loader'],
-      //   include: path.resolve(__dirname, 'src/css'),
-      //   type: 'asset/resource',
-      //   generator: {
-      //     filename: 'css/[name][ext]'
-      //   }
-      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         include: path.resolve(__dirname, 'src/img'),
