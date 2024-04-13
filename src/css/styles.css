@@ -84,7 +84,7 @@ img {
   min-height: 100vh;
   margin: 0;
   opacity: 0.3;
-  background-image: url("../img/fon.webp");
+  background-image: url("~images/fon.webp");
   /* background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%); */ 
   background-size: cover;
   background-repeat: no-repeat;

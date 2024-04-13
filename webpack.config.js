@@ -10,6 +10,11 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, 'src/assets/img/'),
+    },
+  },
   devServer: {
     static: path.join(__dirname, 'src'),
     port: 8080,
