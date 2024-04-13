@@ -12,7 +12,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      images: path.resolve(__dirname, 'src/assets/img/'),
+      images: path.resolve(__dirname, 'src/img/'),
     },
   },
   devServer: {
