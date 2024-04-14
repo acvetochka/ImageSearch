@@ -11,11 +11,15 @@ const gallerySection = document.querySelector(".gallery-section");
 const guard = document.querySelector('.guard');
 let query = '';
 let page = 1;
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: "alt",
+  captionDelay: 250,
+});
 const options = {
   root: null,
   rootMargin: '100px',
   threshold: 0,
+
 };
 
 const observer = new IntersectionObserver(onPagination, options);
