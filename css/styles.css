@@ -89,6 +89,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position-x: center;
   /* filter: blur(5px); */
   backdrop-filter: blur(200px);
   backdrop-filter: opacity(20%);
